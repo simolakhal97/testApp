@@ -19,4 +19,19 @@ public void createEtudient(){
                return list;
                   }
 
+
+
+
+                  public Etudient save(Etudient etudient){
+                     Etudient etudient1=new Etudient(  );
+                     etudient1.setId(etudient.getId());
+                     etudient1.setNom(etudient.getNom());
+                     list.add(etudient);
+                     return etudient;
+                  }
+                  public String delete(String id){
+                  list.removeIf(x->x.getId()==id);
+                  return null;
+                  }
+
 }
