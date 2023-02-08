@@ -1,23 +1,30 @@
 package com.example.test.Model;
 
+import jakarta.persistence.Embeddable;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.Data;
+
+@Data
+@Entity
 public class Etudient {
-    String id;
+    @Id
+   int id;
     String nom;
 
-    public Etudient() {
-    }
-
-
-    public Etudient(String id, String nom) {
+    public Etudient(int id, String nom) {
         this.id = id;
         this.nom = nom;
     }
 
-    public String getId() {
+    public Etudient() {
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
